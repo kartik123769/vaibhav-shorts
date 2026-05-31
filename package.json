@@ -1,0 +1,24 @@
+{
+  "name": "vaibhav-shorts",
+  "version": "1.0.0",
+  "description": "Vaibhav Suryavanshi — RR Doesn't Deserve Him | YouTube Shorts",
+  "scripts": {
+    "start": "remotion studio",
+    "build": "remotion render VaibhavShortsFullVideo --output out/vaibhav-rr-shorts.mp4 --codec h264 --fps 60 --height 1920 --width 1080 --jpeg-quality 95",
+    "preview": "remotion render VaibhavShortsFullVideo --output out/preview.mp4 --codec h264 --scale 0.5"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "remotion": "^4.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.0": true
+  }
+}
