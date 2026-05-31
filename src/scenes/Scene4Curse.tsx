@@ -9,7 +9,6 @@ import {
   spring,
   interpolate,
   useVideoConfig,
-  staticFile,
 } from 'remotion';
 import { COLORS } from '../constants/colors';
 import { SAFE_ZONE } from '../constants/timing';
