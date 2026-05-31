@@ -7,6 +7,10 @@ jobs:
   render:
     runs-on: ubuntu-latest
 
+    env:
+      NODE_OPTIONS: --max-old-space-size=4096
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -17,10 +21,13 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install --legacy-peer-deps
+
+      - name: Build project
+        run: npx remotion build
 
       - name: Render video
-        run: npx remotion render src/Root.tsx VaibhavShortsFullVideo out/video.mp4 --log=verbose
+        run: npx remotion render VaibhavShortsFullVideo out/video.mp4
 
       - name: Upload video
         uses: actions/upload-artifact@v4
