@@ -35,3 +35,16 @@ jobs:
         with:
           name: video
           path: out/video.mp4
+
+      - name: Upload log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: render-log
+          path: render.log
+- name: Upload log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: render-log
+          path: render.log
