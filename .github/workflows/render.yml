@@ -9,7 +9,6 @@ jobs:
 
     env:
       NODE_OPTIONS: --max-old-space-size=4096
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout repo
@@ -21,9 +20,9 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm install
 
-      - name: Build project
+      - name: Build Remotion
         run: npx remotion build
 
       - name: Render video
