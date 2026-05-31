@@ -1,7 +1,7 @@
 // src/components/AnimatedCounter.tsx
 
 import React from 'react';
-import { useCurrentFrame, interpolate, Easing } from 'remotion';
+import { useCurrentFrame, interpolate } from 'remotion';
 import { COLORS } from '../constants/colors';
 
 interface AnimatedCounterProps {
@@ -37,7 +37,7 @@ export const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     {
       extrapolateLeft: 'clamp',
       extrapolateRight: 'clamp',
-      easing: Easing.out(Easing.cubic),
+      easing: (t: number) => 1 - Math.pow(1 - t, 3),
     }
   );
 

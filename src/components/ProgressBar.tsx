@@ -1,7 +1,7 @@
 // src/components/ProgressBar.tsx
 
 import React from 'react';
-import { useCurrentFrame, interpolate, spring, useVideoConfig, Easing } from 'remotion';
+import { useCurrentFrame, interpolate, spring, useVideoConfig } from 'remotion';
 import { COLORS } from '../constants/colors';
 
 interface ProgressBarProps {
@@ -38,7 +38,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
     {
       extrapolateLeft: 'clamp',
       extrapolateRight: 'clamp',
-      easing: Easing.inOut(Easing.quad),
+      easing: (t: number) => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2,
     }
   );
 
