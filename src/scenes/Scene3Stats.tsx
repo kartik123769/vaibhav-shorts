@@ -1,7 +1,7 @@
-// src/scenes/Scene3Stats.tsx
+u// src/scenes/Scene3Stats.tsx
 // 0:13–0:20 | 420 frames @ 60fps
 // 700+ counter animation proof
-
+import { HUDOverlay } from '../components/HUDOverlay';
 import React from 'react';
 import {
   AbsoluteFill,
@@ -227,11 +227,29 @@ export const Scene3Stats: React.FC = () => {
               HIM DOWN
             </div>
           </div>
-        </AbsoluteFill>
+        </div>
+       </AbsoluteFill>
       )}
 
+<HUDOverlay
+  width={960}
+  height={400}
+  startFrame={160}
+  accentColor={COLORS.amber}
+  label="STATS ANALYSIS"
+  tags={[
+    { label: 'RUNS', value: '734+', edge: 'right', offsetPercent: 25 },
+    { label: 'SR', value: '192.6', edge: 'right', offsetPercent: 60 },
+    { label: 'MATCHES', value: '6/6', edge: 'left', offsetPercent: 40 },
+  ]}
+/>
       {/* Flash entry */}
-      <FlashTransition atFrame={0} durationFrames={4} color={COLORS.white} />
+      <FlashTransition
+        atFrame={0}
+        durationFrames={4}
+        color={COLORS.white}
+      />
     </AbsoluteFill>
   );
 };
+
