@@ -15,6 +15,7 @@ import { SAFE_ZONE } from '../constants/timing';
 import { TextBadge } from '../components/TextBadge';
 import { ProgressBar } from '../components/ProgressBar';
 import { FlashTransition } from '../components/FlashTransition';
+import { FloatingCard } from '../components/FloatingCard';
 
 // Team logo card
 const TeamLogoCard: React.FC<{
@@ -335,7 +336,15 @@ export const Scene6Escape: React.FC = () => {
         )}
       </AbsoluteFill>
 
-      {/* Flash entry */}
+      {/* Floating offer cards */}
+        {frame > 45 {/* Flash entry */}{/* Flash entry */} frame < 200 {/* Flash entry */}{/* Flash entry */} (
+          <FloatingCard x={60} y={900} startFrame={45} accentColor={COLORS.green} title="IPL 2025" value="RCB" subtext="offer accepted" />
+        )}
+        {frame > 300 {/* Flash entry */}{/* Flash entry */} (
+          <FloatingCard x={620} y={900} startFrame={300} accentColor={COLORS.orange} title="DREAM TEAM" value="RCB+" subtext="virat + vaibhav" />
+        )}
+
+        {/* Flash entry */}
       <FlashTransition atFrame={0} durationFrames={5} color={COLORS.green} />
     </AbsoluteFill>
   );
