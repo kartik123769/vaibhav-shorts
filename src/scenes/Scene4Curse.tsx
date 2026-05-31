@@ -221,13 +221,13 @@ export const Scene4Curse: React.FC = () => {
         </div>
 
         {/* Floating stat cards per player */}
-        {activeIndex === 0 {/* Dependency meter */}{/* Dependency meter */} (
+        {activeIndex === 0 && (
           <FloatingCard x={60} y={520} startFrame={15} accentColor="#00AAFF" title="BUTTLER 2022" value="863" subtext="runs — carried RR alone" />
         )}
-        {activeIndex === 1 {/* Dependency meter */}{/* Dependency meter */} (
+        {activeIndex === 1 && (
           <FloatingCard x={60} y={520} startFrame={150} accentColor="#FFCC00" title="JAISWAL 2024" value="967" subtext="runs — same curse" />
         )}
-        {activeIndex === 2 {/* Dependency meter */}{/* Dependency meter */} (
+        {activeIndex === 2 && (
           <FloatingCard x={60} y={520} startFrame={310} accentColor={COLORS.orange} title="VAIBHAV 2025" value="734+" subtext="runs — history repeats?" />
         )}
 
