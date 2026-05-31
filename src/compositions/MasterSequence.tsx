@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { AbsoluteFill, Series } from 'remotion';
-import { COLORS, SCENE_DURATIONS } from '../constants/timing';
+import { SCENE_DURATIONS } from '../constants/timing';
+import { COLORS } from '../constants/colors';
 
 import { Scene1Hook }     from '../scenes/Scene1Hook';
 import { Scene2Sacrifice } from '../scenes/Scene2Sacrifice';
