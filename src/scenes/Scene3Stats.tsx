@@ -227,7 +227,6 @@ export const Scene3Stats: React.FC = () => {
               HIM DOWN
             </div>
           </div>
-        </div>
        </AbsoluteFill>
       )}
 
