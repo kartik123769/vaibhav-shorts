@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCurrentFrame, useVideoConfig, interpolate, Easing } from 'remotion';
+import { useCurrentFrame, useVideoConfig, interpolate } from 'remotion';
 import { COLORS } from '../constants/colors';
 
 interface FloatingCardProps {
@@ -35,7 +35,7 @@ export const FloatingCard: React.FC<FloatingCardProps> = ({
   const entryProgress = interpolate(localFrame, [0, 18], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
-    easing: Easing.out(Easing.cubic),
+    easing: (t: number) => 1 - Math.pow(1 - t, 3),
   });
 
   const floatY = localFrame >= 0
