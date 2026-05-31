@@ -19,9 +19,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Bundle project
-        run: npx remotion bundle src/Root.tsx
-
       - name: Render video
         run: npx remotion render src/Root.tsx VaibhavShortsFullVideo out/video.mp4 --log=verbose
 
