@@ -28,7 +28,7 @@ jobs:
           npx remotion browser ensure
 
       - name: Render video
-        run: npx remotion render src/index.ts VaibhavShortsFullVideo out/video.mp4 --log=verbose
+        run: npx remotion render src/index.ts VaibhavShortsFullVideo out/video.mp4 --log=verbose 2>&1 | tee render.log
 
       - name: Upload video
         uses: actions/upload-artifact@v4

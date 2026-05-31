@@ -2,7 +2,7 @@
 // Wraps either a real <Video> or a placeholder gradient
 
 import React from 'react';
-import { AbsoluteFill, Video, OffthreadVideo, staticFile } from 'remotion';
+import { AbsoluteFill, OffthreadVideo, staticFile } from 'remotion';
 import { COLORS } from '../constants/colors';
 
 interface VideoBackgroundProps {
