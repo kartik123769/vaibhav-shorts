@@ -19,8 +19,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      # IMPORTANT: ensure chrome exists for Remotion
+      - name: Install Remotion browser
+        run: npx remotion browser ensure
+
+      # Render video (SAFE ENTRY POINT AUTO-DETECT)
       - name: Render video
-        run: npx remotion render VaibhavShortsFullVideo out/video.mp4 --log=verbose
+        run: npx remotion render src/Root.tsx VaibhavShortsFullVideo out/video.mp4 --log=verbose
+
       - name: Upload video
         uses: actions/upload-artifact@v4
         with:
