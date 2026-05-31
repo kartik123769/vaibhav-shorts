@@ -22,11 +22,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build Remotion
-        run: npx remotion build
+      - name: Verify compositions
+        run: npx remotion compositions src/Root.tsx
 
       - name: Render video
-        run: npx remotion render VaibhavShortsFullVideo out/video.mp4
+        run: npx remotion render src/Root.tsx VaibhavShortsFullVideo out/video.mp4 --log=verbose
 
       - name: Upload video
         uses: actions/upload-artifact@v4
