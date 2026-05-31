@@ -337,10 +337,10 @@ export const Scene6Escape: React.FC = () => {
       </AbsoluteFill>
 
       {/* Floating offer cards */}
-        {frame > 45 {/* Flash entry */}{/* Flash entry */} frame < 200 {/* Flash entry */}{/* Flash entry */} (
+          {frame > 45 && frame < 200 && (
           <FloatingCard x={60} y={900} startFrame={45} accentColor={COLORS.green} title="IPL 2025" value="RCB" subtext="offer accepted" />
         )}
-        {frame > 300 {/* Flash entry */}{/* Flash entry */} (
+          {frame > 300 && (
           <FloatingCard x={620} y={900} startFrame={300} accentColor={COLORS.orange} title="DREAM TEAM" value="RCB+" subtext="virat + vaibhav" />
         )}
 
